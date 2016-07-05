@@ -14,6 +14,7 @@ RUN go get github.com/phocean/gophish &&\
 cd /opt/go/src/github.com/gophish/gophish/ &&\
 go build
 
-WORKDIR /opt
+WORKDIR /opt/go/src/github.com/gophish/gophish
+ADD ./config.json .
 
 CMD "/bin/bash"
