@@ -11,10 +11,10 @@ ENV GOPATH /opt/go
 ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
 
 RUN go get github.com/phocean/gophish &&\
-cd /opt/go/src/github.com/gophish/gophish/ &&\
+cd /opt/go/src/github.com/phocean/gophish/ &&\
 go build
 
-WORKDIR /opt/go/src/github.com/gophish/gophish
+WORKDIR /opt/go/src/github.com/phocean/gophish
 ADD ./config.json .
 
 CMD "/bin/bash"
